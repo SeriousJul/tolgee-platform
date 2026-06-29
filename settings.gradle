@@ -131,8 +131,6 @@ project(':data').projectDir = new File('backend/data')
 
 gradle.ext.billingAppDirectory = new File('../billing/app')
 gradle.ext.billingTestDirectory = new File('../billing/tests')
-gradle.ext.eeAppDirectory = new File('./ee/backend/app')
-gradle.ext.eeAppDirectoryExists = gradle.ext.eeAppDirectory.exists()
 
 if (gradle.ext.billingAppDirectory.exists()) {
     include ':billing-app'
@@ -149,14 +147,6 @@ project(':testing').projectDir = new File('backend/testing')
 
 include ':misc'
 project(':misc').projectDir = new File('backend/misc')
-
-if (gradle.ext.eeAppDirectoryExists) {
-    include ':ee-app'
-    project(':ee-app').projectDir = new File('ee/backend/app')
-
-    include ':ee-test'
-    project(':ee-test').projectDir = new File('ee/backend/tests')
-}
 
 include ':development'
 project(':development').projectDir = new File('backend/development')

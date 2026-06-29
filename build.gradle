@@ -111,7 +111,6 @@ project(':server-app').afterEvaluate {
 
     tasks.register('stopDbChangelogContainer', Exec) {
         mustRunAfter ':data:diffChangelog'
-        mustRunAfter ':ee-app:diffChangelog'
 
         commandLine "docker", "rm", "--force", "--volumes", dbSchemaContainerName
     }
@@ -129,10 +128,6 @@ project(':server-app').afterEvaluate {
 
         if (gradle.ext.billingAppDirectory.exists()) {
             finalizedBy.add(':billing-app:diffChangelog')
-        }
-
-        if (gradle.ext.eeAppDirectoryExists) {
-            finalizedBy.add(':ee-app:diffChangelog')
         }
 
         finalizedBy.add(stopDbChangelogContainer)

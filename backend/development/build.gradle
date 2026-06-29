@@ -70,10 +70,6 @@ dependencies {
     implementation libs.kotlinReflect
     implementation libs.kotlinCoroutines
 
-    if (gradle.ext.eeAppDirectoryExists) {
-        implementation project(":ee-app")
-    }
-
     ktlint(project(":ktlint"))
 }
 

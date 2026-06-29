@@ -34,7 +34,6 @@ jobs:
             "server-app:runStandardTests",
             "server-app:runWebsocketTests",
             "server-app:runWithoutEeTests",
-            "ee-test:test",
             "data:test",
             "security:test",
             "ktlint:test",
