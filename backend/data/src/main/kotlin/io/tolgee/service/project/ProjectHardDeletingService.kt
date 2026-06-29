@@ -114,7 +114,7 @@ class ProjectHardDeletingService(
         promptService.deleteAllByProjectId(projectId)
       } catch (e: Exception) {
         // Prompt deletion is not implemented in OSS, so we silently ignore this
-        traceLog("Prompt deletion not available in OSS mode")
+        logger.debug("Prompt deletion not available in OSS mode")
       }
 
       aiPlaygroundResultService.deleteResultsByProject(projectId)
