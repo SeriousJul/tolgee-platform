@@ -40,7 +40,6 @@ Tests are split into multiple categories that run in parallel in CI:
 ./gradlew server-app:runStandardTests && \
 ./gradlew server-app:runWebsocketTests && \
 ./gradlew server-app:runWithoutEeTests && \
-./gradlew ee-test:test && \
 ./gradlew data:test && \
 ./gradlew security:test
 ```

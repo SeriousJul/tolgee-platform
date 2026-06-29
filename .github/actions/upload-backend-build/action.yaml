@@ -22,8 +22,6 @@ runs:
         tar --zstd -cf ~/backend-testing.tar.zst $BASE_DIR/backend/testing/build
         tar --zstd -cf ~/backend-ktlint.tar.zst $BASE_DIR/backend/ktlint/build
         tar --zstd -cf ~/backend-development.tar.zst $BASE_DIR/backend/development/build
-        tar --zstd -cf ~/ee-backend-app.tar.zst $BASE_DIR/ee/backend/app/build
-        tar --zstd -cf ~/ee-backend-tests.tar.zst $BASE_DIR/ee/backend/tests/build
         tar --zstd -cf ~/backend-email.tar.zst $BASE_DIR/email/out
 
     - name: Upload backend build result
@@ -39,6 +37,4 @@ runs:
           ~/backend-testing.tar.zst
           ~/backend-ktlint.tar.zst
           ~/backend-development.tar.zst
-          ~/ee-backend-app.tar.zst
-          ~/ee-backend-tests.tar.zst
           ~/backend-email.tar.zst
