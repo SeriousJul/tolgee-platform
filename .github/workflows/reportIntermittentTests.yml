@@ -33,7 +33,6 @@ jobs:
             "server-app:runContextRecreatingTests",
             "server-app:runStandardTests",
             "server-app:runWebsocketTests",
-            "server-app:runWithoutEeTests",
             "data:test",
             "security:test",
             "ktlint:test",
@@ -48,11 +47,6 @@ jobs:
 
       - name: Download backend build result
         uses: ./.github/actions/download-backend-build
-
-      - name: Remove ee
-        if: matrix.command == 'server-app:runWithoutEeTests'
-        run: |
-          rm -rf ./ee
 
       - name: Run backend tests
         timeout-minutes: 30

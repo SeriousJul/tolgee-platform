@@ -28,6 +28,4 @@ runs:
         tar --zstd -xf ~/backend-testing.tar.zst $BASE_DIR/backend/testing/build
         tar --zstd -xf ~/backend-ktlint.tar.zst $BASE_DIR/backend/ktlint/build
         tar --zstd -xf ~/backend-development.tar.zst $BASE_DIR/backend/development/build
-        tar --zstd -xf ~/ee-backend-app.tar.zst $BASE_DIR/ee/backend/app/build
-        tar --zstd -xf ~/ee-backend-tests.tar.zst $BASE_DIR/ee/backend/tests/build
         tar --zstd -xf ~/backend-email.tar.zst $BASE_DIR/email/out
